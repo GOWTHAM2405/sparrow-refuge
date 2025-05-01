@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Leaf, Bird } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -28,9 +28,7 @@ export function Navbar() {
     { name: "Home", path: "/" },
     { name: "Shop", path: "/shop" },
     { name: "About Sparrows", path: "/about-sparrows" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Blog", path: "/blog" },
-    { name: "Team", path: "/team" },
+    { name: "Blog & Gallery", path: "/blog-gallery" },
     { name: "About Us", path: "/about" },
   ];
 
@@ -48,9 +46,10 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link
               to="/"
-              className="font-sans font-semibold text-xl text-gray-900"
+              className="font-sans font-semibold text-xl text-gray-900 flex items-center"
             >
-              Sparrow Refugee
+              <Bird className="text-sparrow-brown mr-2" size={24} />
+              Sparrow Refuge
             </Link>
           </div>
 
@@ -60,8 +59,9 @@ export function Navbar() {
               <Link
                 key={item.name}
                 to={item.path}
-                className="font-sans text-sm text-gray-800 hover:text-sparrow-brown transition-colors"
+                className="font-sans text-sm text-gray-800 hover:text-sparrow-brown transition-colors flex items-center"
               >
+                {item.path === "/about" && <Leaf className="mr-1" size={14} />}
                 {item.name}
               </Link>
             ))}
