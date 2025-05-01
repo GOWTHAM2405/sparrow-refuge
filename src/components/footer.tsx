@@ -5,14 +5,14 @@ export function Footer() {
   return (
     <footer className="bg-white border-t border-gray-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-2">
             <h3 className="font-sans text-lg font-semibold text-gray-900 mb-4">Sparrow Refugee</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Dedicated to protecting house sparrows in urban areas and promoting biodiversity in our cities.
+              Dedicated to protecting house sparrows in urban areas and promoting biodiversity in our cities. Together, we can create spaces where humans and birds thrive side by side.
             </p>
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Sparrow Refugee. All rights reserved.
+              © {new Date().getFullYear()} Sparrow Refuge. All rights reserved.
             </p>
           </div>
           
@@ -25,27 +25,53 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/shop" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Shop
+                </Link>
+              </li>
+              <li>
                 <Link to="/about-sparrows" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
                   About Sparrows
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
-                  About Us
+                <Link to="/gallery" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Gallery
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
-                  Support Us
+                <Link to="/blog" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Blog
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-sans text-base font-medium text-gray-900 mb-4">Contact</h4>
-            <p className="text-gray-600 text-sm mb-2">info@sparrowrefuge.org</p>
-            <div className="flex space-x-4 mt-4">
+            <h4 className="font-sans text-base font-medium text-gray-900 mb-4">About Us</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/team" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Our Mission
+                </Link>
+              </li>
+              <li>
+                <Link to="/community" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Join Community
+                </Link>
+              </li>
+              <li>
+                <a href="mailto:info@sparrowrefuge.org" className="text-gray-600 text-sm hover:text-sparrow-brown transition-colors">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+            <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-500 hover:text-sparrow-brown transition-colors">
                 <span className="sr-only">Twitter</span>
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

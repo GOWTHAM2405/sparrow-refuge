@@ -26,7 +26,11 @@ export function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "Shop", path: "/shop" },
     { name: "About Sparrows", path: "/about-sparrows" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Blog", path: "/blog" },
+    { name: "Team", path: "/team" },
     { name: "About Us", path: "/about" },
   ];
 
@@ -51,7 +55,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -61,8 +65,8 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button variant="outline" className="ml-4 border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
-              Support Us
+            <Button asChild variant="outline" className="ml-4 border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
+              <Link to="/community">Join Community</Link>
             </Button>
           </div>
 
@@ -93,8 +97,8 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-2 text-center">
-              <Button variant="outline" className="border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
-                Support Us
+              <Button asChild variant="outline" className="border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
+                <Link to="/community" onClick={() => setIsOpen(false)}>Join Community</Link>
               </Button>
             </div>
           </div>
