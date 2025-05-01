@@ -3,7 +3,7 @@ import { useState } from "react";
 import { PageLayout } from "@/components/page-layout";
 import { ProductCard } from "@/components/product-card";
 import { SectionDivider } from "@/components/ui/section-divider";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 // Sample product data (in a real app, this would come from an API)
 const products = [
