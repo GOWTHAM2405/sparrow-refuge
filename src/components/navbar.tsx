@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Leaf, Bird } from "lucide-react";
+import { Menu, X, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -48,8 +48,15 @@ export function Navbar() {
               to="/"
               className="font-sans font-semibold text-xl text-gray-900 flex items-center"
             >
-              <Bird className="text-sparrow-brown mr-2" size={24} />
-              Sparrow Refuge
+              <img 
+                src="/lovable-uploads/cdcae1ac-277c-4470-800e-ac80ae0f703d.png" 
+                alt="Sparrow Refuge Logo" 
+                className="h-8 mr-2" 
+              />
+              <span className={cn(
+                "transition-opacity duration-300",
+                scrolled ? "opacity-100" : "opacity-0 md:opacity-100"
+              )}>Sparrow Refuge</span>
             </Link>
           </div>
 
