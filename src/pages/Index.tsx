@@ -5,6 +5,7 @@ import { StorySection } from "@/components/story-section";
 import { InfoSection } from "@/components/info-section";
 import { FeatureCard } from "@/components/feature-card";
 import { ProductHighlight } from "@/components/product-highlight";
+import { ContactSection } from "@/components/contact-section";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { Button } from "@/components/ui/button";
 
@@ -16,8 +17,7 @@ const Index = () => {
         subtitle="Protecting house sparrows in urban areas and promoting biodiversity where we live"
         ctaText="Learn More"
         ctaLink="#mission"
-        imageUrl="https://images.unsplash.com/photo-1552727451-6f5671e14d83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-        imageAlt="House sparrow perched on a branch"
+        backgroundClass="bg-gradient-to-br from-amber-50 to-amber-100"
       />
 
       <section id="mission" className="py-16 md:py-24 bg-white">
@@ -84,7 +84,7 @@ const Index = () => {
         imageUrl="https://images.unsplash.com/photo-1591758879073-6fc9c4ee5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
         imageAlt="Sparrow Nest product"
         ctaText="Coming Soon"
-        ctaLink="#"
+        ctaLink="/shop"
       />
 
       <section className="bg-sparrow-light-brown/20 py-16 text-center">
@@ -104,6 +104,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      <ContactSection />
     </PageLayout>
   );
 };

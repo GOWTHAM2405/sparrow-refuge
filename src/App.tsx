@@ -10,12 +10,10 @@ import Index from "./pages/Index";
 import AboutSparrows from "./pages/AboutSparrows";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
-import Team from "./pages/Team";
-import Community from "./pages/Community";
-import Gallery from "./pages/Gallery";
-import Blog from "./pages/Blog";
+import BlogAndGallery from "./pages/BlogAndGallery";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import Community from "./pages/Community";
 
 const queryClient = new QueryClient();
 
@@ -29,10 +27,8 @@ const App = () => (
             <Route path="/about-sparrows" element={<AboutSparrows />} />
             <Route path="/about" element={<About />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/team" element={<Team />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog-gallery" element={<BlogAndGallery />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
