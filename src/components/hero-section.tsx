@@ -9,6 +9,9 @@ interface HeroSectionProps {
   ctaLink?: string;
   className?: string;
   backgroundClass?: string;
+  imageUrl?: string;
+  imageAlt?: string;
+  overlayColor?: string;
 }
 
 export function HeroSection({
@@ -18,10 +21,30 @@ export function HeroSection({
   ctaLink,
   className,
   backgroundClass = "bg-gradient-to-br from-sparrow-light-brown/30 to-sparrow-brown/40",
+  imageUrl,
+  imageAlt,
+  overlayColor,
 }: HeroSectionProps) {
+  // If imageUrl is provided, use it as background image
+  const backgroundStyle = imageUrl 
+    ? { backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+    : {};
+    
   return (
-    <div className={cn("relative min-h-[80vh] flex items-center justify-center w-full", backgroundClass, className)}>
-      <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8 animate-fade-in">
+    <div 
+      className={cn(
+        "relative min-h-[80vh] flex items-center justify-center w-full", 
+        backgroundClass, 
+        className
+      )}
+      style={backgroundStyle}
+    >
+      {/* Overlay if overlayColor is provided */}
+      {overlayColor && (
+        <div className={`absolute inset-0 ${overlayColor}`}></div>
+      )}
+      
+      <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8 animate-fade-in relative z-10">
         <div className="mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-sparrow-brown opacity-80 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
             <path d="M8 17c.9 0 1.7-.5 2-1.5.1-.6-.4-1.2-1-1.2h-2M12 17c.9 0 1.7-.5 2-1.5.1-.6-.4-1.2-1-1.2h-2" />
