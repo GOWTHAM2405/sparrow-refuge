@@ -131,17 +131,6 @@ export function HeroSection({
       
       {/* Content */}
       <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8 animate-fade-in relative z-10">
-        <div className="mb-6">
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/cdcae1ac-277c-4470-800e-ac80ae0f703d.png" 
-              alt="Sparrow Refuge Logo" 
-              className="h-24 w-auto mx-auto mb-4 filter drop-shadow-lg"
-            />
-            <div className="absolute w-40 h-40 bg-amber-200/20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" style={{ animationDuration: '4s' }}></div>
-          </div>
-        </div>
-        
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6 drop-shadow-md">
           {title}
         </h1>
