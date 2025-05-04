@@ -9,15 +9,16 @@ import { ContactSection } from "@/components/contact-section";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ShoppingBag } from "lucide-react";
 
 const Index = () => {
   return (
     <PageLayout>
       <HeroSection
-        title="Promoting Urban Sparrow Conservation"
-        subtitle="Dedicated to safeguarding house sparrows in cities."
-        ctaText="Learn More"
-        ctaLink="#mission"
+        title="Protect Sparrows with Our Nest Boxes"
+        subtitle="Provide a safe home for urban sparrows with our specially designed nest boxes."
+        ctaText="Shop Sparrow Nests"
+        ctaLink="/shop"
         imageUrl="/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png"
         imageAlt="Sparrow on a nest box"
       />
@@ -26,15 +27,18 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6">Our Mission</h2>
-              <p className="text-lg text-[#606C38] mb-4">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6 font-serif">Our Mission</h2>
+              <p className="text-lg text-[#606C38] mb-4 font-serif">
                 Sparrow Refuge is dedicated to protecting and preserving house sparrow populations in urban environments 
                 where their numbers have been drastically declining.
               </p>
-              <p className="text-lg text-[#606C38]">
+              <p className="text-lg text-[#606C38] mb-6 font-serif">
                 We create sustainable habitats and raise awareness about the importance of these birds in our ecosystem. 
-                Through our simple yet effective Sparrow Nest product, we aim to bring these cheerful birds back to our cities.
+                Our simple yet effective Sparrow Nest product helps bring these cheerful birds back to our cities.
               </p>
+              <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
+                <a href="/shop"><ShoppingBag className="mr-2" size={18} />Buy a Sparrow Nest</a>
+              </Button>
             </div>
             <div className="w-full md:w-1/2 bg-white p-2 border border-[#DDA15E]">
               <AspectRatio ratio={4/3} className="bg-muted">
@@ -54,7 +58,13 @@ const Index = () => {
         content="House sparrows have been our companions in human settlements for thousands of years. Yet in the past few decades, their populations have declined by over 60% in some urban areas. Modern building techniques, loss of green spaces, and reduced food sources have all contributed to this alarming trend."
         imageUrl="https://images.unsplash.com/photo-1591445313121-6ec078571574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
         imageAlt="Sparrow in an urban environment"
-      />
+      >
+        <div className="mt-6">
+          <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
+            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Help Sparrows Now</a>
+          </Button>
+        </div>
+      </StorySection>
 
       <SectionDivider />
 
@@ -87,6 +97,11 @@ const Index = () => {
             </div>
           </AspectRatio>
         </div>
+        <div className="text-center mt-8">
+          <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
+            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Browse Sparrow Nests</a>
+          </Button>
+        </div>
       </InfoSection>
 
       <SectionDivider />
@@ -103,7 +118,7 @@ const Index = () => {
         ]}
         imageUrl="https://images.unsplash.com/photo-1591758879073-6fc9c4ee5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
         imageAlt="Sparrow Nest product"
-        ctaText="Coming Soon"
+        ctaText="Shop Now"
         ctaLink="/shop"
       />
 
@@ -118,17 +133,17 @@ const Index = () => {
               </AspectRatio>
             </div>
             <div className="w-full md:w-1/2 order-1 md:order-2">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6">Join Our Mission</h2>
-              <p className="text-lg text-[#606C38] mb-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6 font-serif">Join Our Mission</h2>
+              <p className="text-lg text-[#606C38] mb-8 font-serif">
                 Together, we can create urban spaces where sparrows and people thrive side by side.
-                Learn more about our initiative and how you can help.
+                Purchase a sparrow nest today and help save our urban bird populations.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button asChild variant="outline" className="border-[#606C38] text-[#606C38] hover:bg-[#606C38]/10">
-                  <a href="/about">About Sparrow Refuge</a>
+                  <a href="/about-sparrows">Learn About Sparrows</a>
                 </Button>
                 <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-                  <a href="/about-sparrows">Discover House Sparrows</a>
+                  <a href="/shop"><ShoppingBag className="mr-2" size={18} />Shop Sparrow Nests</a>
                 </Button>
               </div>
             </div>

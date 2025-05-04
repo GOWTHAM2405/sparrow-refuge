@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ShoppingBag } from "lucide-react";
 
 interface HeroSectionProps {
   title?: string;
@@ -18,8 +18,8 @@ interface HeroSectionProps {
 export function HeroSection({
   title = "Promoting Urban Sparrow Conservation",
   subtitle = "Dedicated to safeguarding house sparrows in cities.",
-  ctaText = "Learn More",
-  ctaLink = "#mission",
+  ctaText = "Shop Now",
+  ctaLink = "/shop",
   className,
   imageUrl = "/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png",
   imageAlt = "Sparrow on a nest box",
@@ -31,11 +31,11 @@ export function HeroSection({
       {/* Left content area */}
       <div className="w-full md:w-1/2 bg-[#FEFAE0] flex items-center justify-center">
         <div className="max-w-xl px-8 md:px-16 py-16 md:py-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-[#283618] leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-[#283618] leading-tight mb-6 font-serif">
             {title}
           </h1>
           
-          <p className="text-lg text-[#606C38] mb-8">
+          <p className="text-lg text-[#606C38] mb-8 font-serif">
             {subtitle}
           </p>
           
@@ -43,9 +43,9 @@ export function HeroSection({
             <Button 
               asChild 
               size="lg" 
-              className="bg-[#606C38] hover:bg-[#283618] text-white px-8 py-6 h-auto text-base font-normal rounded-none"
+              className="bg-[#606C38] hover:bg-[#283618] text-white px-8 py-6 h-auto text-base font-normal rounded-md"
             >
-              <a href={ctaLink}>{ctaText}</a>
+              <a href={ctaLink}><ShoppingBag className="mr-2" size={18} />{ctaText}</a>
             </Button>
           )}
         </div>
