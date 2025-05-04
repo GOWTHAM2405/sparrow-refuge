@@ -15,10 +15,11 @@ import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Community from "./pages/Community";
 
+// Create a client
 const queryClient = new QueryClient();
 
-const App = () => (
-  <React.StrictMode>
+function App() {
+  return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <TooltipProvider>
@@ -37,7 +38,7 @@ const App = () => (
         </TooltipProvider>
       </BrowserRouter>
     </QueryClientProvider>
-  </React.StrictMode>
-);
+  );
+}
 
 export default App;

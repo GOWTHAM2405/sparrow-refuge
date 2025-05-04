@@ -11,6 +11,8 @@ interface HeroSectionProps {
   className?: string;
   imageUrl?: string;
   imageAlt?: string;
+  backgroundClass?: string;
+  overlayColor?: string;
 }
 
 export function HeroSection({
@@ -21,9 +23,11 @@ export function HeroSection({
   className,
   imageUrl = "/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png",
   imageAlt = "Sparrow on a nest box",
+  backgroundClass,
+  overlayColor,
 }: HeroSectionProps) {
   return (
-    <div className={cn("w-full flex flex-col md:flex-row min-h-[90vh]", className)}>
+    <div className={cn("w-full flex flex-col md:flex-row min-h-[90vh]", backgroundClass, className)}>
       {/* Left content area */}
       <div className="w-full md:w-1/2 bg-[#FEFAE0] flex items-center justify-center">
         <div className="max-w-xl px-8 md:px-16 py-16 md:py-0">
@@ -49,6 +53,7 @@ export function HeroSection({
       
       {/* Right image area */}
       <div className="w-full md:w-1/2 h-[50vh] md:h-auto relative">
+        <div className={cn("absolute inset-0", overlayColor)}></div>
         <img 
           src={imageUrl} 
           alt={imageAlt} 
