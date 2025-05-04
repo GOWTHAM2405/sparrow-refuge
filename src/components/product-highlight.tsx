@@ -1,6 +1,7 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ShoppingBag } from "lucide-react";
 
 interface ProductHighlightProps {
   title: string;
@@ -19,7 +20,7 @@ export function ProductHighlight({
   features,
   imageUrl,
   imageAlt,
-  ctaText,
+  ctaText = "Adopt Sparrows",
   ctaLink,
   className,
 }: ProductHighlightProps) {
@@ -48,7 +49,7 @@ export function ProductHighlight({
             </ul>
             {ctaText && ctaLink && (
               <Button asChild className="bg-sparrow-brown hover:bg-sparrow-brown/90 text-white">
-                <a href={ctaLink}>{ctaText}</a>
+                <a href={ctaLink}><ShoppingBag className="mr-2" size={18} />{ctaText}</a>
               </Button>
             )}
           </div>

@@ -18,7 +18,7 @@ interface HeroSectionProps {
 export function HeroSection({
   title = "Promoting Urban Sparrow Conservation",
   subtitle = "Dedicated to safeguarding house sparrows in cities.",
-  ctaText = "Shop Now",
+  ctaText = "Adopt Sparrows",
   ctaLink = "/shop",
   className,
   imageUrl = "/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png",

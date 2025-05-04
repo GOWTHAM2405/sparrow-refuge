@@ -1,3 +1,4 @@
+
 import { PageLayout } from "@/components/page-layout";
 import { HeroSection } from "@/components/hero-section";
 import { StorySection } from "@/components/story-section";
@@ -16,7 +17,7 @@ const AboutSparrows = () => {
         imageUrl="https://images.unsplash.com/photo-1621866486780-1a732a78329a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
         imageAlt="Close-up of a house sparrow"
         overlayColor="bg-black/40"
-        ctaText="Shop Sparrow Nests"
+        ctaText="Adopt Sparrows"
         ctaLink="/shop"
       />
 
@@ -37,7 +38,7 @@ const AboutSparrows = () => {
           young sparrows continue to be fed by their parents for about another week.
         </p>
         <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-          <a href="/shop"><ShoppingBag className="mr-2" size={18} />Shop Sparrow Nests</a>
+          <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
         </Button>
       </StorySection>
 
@@ -107,7 +108,7 @@ const AboutSparrows = () => {
               </p>
               <div className="text-center mt-8">
                 <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-                  <a href="/shop"><ShoppingBag className="mr-2" size={18} />Get a Sparrow Nest Today</a>
+                  <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows Today</a>
                 </Button>
               </div>
             </div>
@@ -160,7 +161,7 @@ const AboutSparrows = () => {
         </div>
         <div className="text-center mt-8">
           <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Shop Sparrow Nests</a>
+            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
           </Button>
         </div>
       </section>

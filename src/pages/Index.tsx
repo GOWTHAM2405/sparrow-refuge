@@ -17,7 +17,7 @@ const Index = () => {
       <HeroSection
         title="Protect Sparrows with Our Nest Boxes"
         subtitle="Provide a safe home for urban sparrows with our specially designed nest boxes."
-        ctaText="Shop Sparrow Nests"
+        ctaText="Adopt Sparrows"
         ctaLink="/shop"
         imageUrl="/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png"
         imageAlt="Sparrow on a nest box"
@@ -37,7 +37,7 @@ const Index = () => {
                 Our simple yet effective Sparrow Nest product helps bring these cheerful birds back to our cities.
               </p>
               <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-                <a href="/shop"><ShoppingBag className="mr-2" size={18} />Buy a Sparrow Nest</a>
+                <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
               </Button>
             </div>
             <div className="w-full md:w-1/2 bg-white p-2 border border-[#DDA15E]">
@@ -61,7 +61,7 @@ const Index = () => {
       >
         <div className="mt-6">
           <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Help Sparrows Now</a>
+            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
           </Button>
         </div>
       </StorySection>
@@ -99,7 +99,7 @@ const Index = () => {
         </div>
         <div className="text-center mt-8">
           <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Browse Sparrow Nests</a>
+            <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
           </Button>
         </div>
       </InfoSection>
@@ -118,7 +118,7 @@ const Index = () => {
         ]}
         imageUrl="https://images.unsplash.com/photo-1591758879073-6fc9c4ee5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
         imageAlt="Sparrow Nest product"
-        ctaText="Shop Now"
+        ctaText="Adopt Sparrows"
         ctaLink="/shop"
       />
 
@@ -143,7 +143,7 @@ const Index = () => {
                   <a href="/about-sparrows">Learn About Sparrows</a>
                 </Button>
                 <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
-                  <a href="/shop"><ShoppingBag className="mr-2" size={18} />Shop Sparrow Nests</a>
+                  <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
                 </Button>
               </div>
             </div>
