@@ -13,11 +13,12 @@ const Index = () => {
   return (
     <PageLayout>
       <HeroSection
-        title="Give Sparrows a Home in Our Urban World"
-        subtitle="Protecting house sparrows in urban areas and promoting biodiversity where we live"
+        title="Promoting Urban Sparrow Conservation"
+        subtitle="Dedicated to safeguarding house sparrows in cities."
         ctaText="Learn More"
         ctaLink="#mission"
-        backgroundClass="bg-gradient-to-br from-amber-50 to-amber-100"
+        imageUrl="/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png"
+        imageAlt="Sparrow on a nest box"
       />
 
       <section id="mission" className="py-16 md:py-24 bg-white">
