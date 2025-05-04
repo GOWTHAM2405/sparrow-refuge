@@ -63,12 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom sparrow refugee color palette
+				// Updated color palette with olive green theme
 				sparrow: {
-					'brown': '#C8B6A6',
-					'light-brown': '#E6D7C3',
-					'gray': '#F5F5F5',
-					'dark-gray': '#8A898C',
+					'brown': '#606C38',     // Main olive green
+					'light-brown': '#DDA15E', // Accent orange-tan
+					'gray': '#FEFAE0',      // Light cream background
+					'dark-gray': '#283618',  // Dark olive green
+					'tan': '#BC6C25',       // Darker accent tan
 				}
 			},
 			borderRadius: {
@@ -119,8 +120,8 @@ export default {
 				'slow-fade-in': 'slow-fade-in 1.2s ease-out',
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				serif: ['Merriweather', 'serif'],
+				sans: ['Cormorant Garamond', 'serif'],
+				serif: ['Libre Baskerville', 'serif'],
 			},
 		}
 	},

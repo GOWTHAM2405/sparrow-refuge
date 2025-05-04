@@ -8,6 +8,7 @@ import { ProductHighlight } from "@/components/product-highlight";
 import { ContactSection } from "@/components/contact-section";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Index = () => {
   return (
@@ -21,17 +22,28 @@ const Index = () => {
         imageAlt="Sparrow on a nest box"
       />
 
-      <section id="mission" className="py-16 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">Our Mission</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Sparrow Refugee is dedicated to protecting and preserving house sparrow populations in urban environments 
-            where their numbers have been drastically declining.
-          </p>
-          <p className="text-lg text-gray-700">
-            We create sustainable habitats and raise awareness about the importance of these birds in our ecosystem. 
-            Through our simple yet effective Sparrow Nest product, we aim to bring these cheerful birds back to our cities.
-          </p>
+      <section id="mission" className="py-16 md:py-24 bg-[#FEFAE0]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6">Our Mission</h2>
+              <p className="text-lg text-[#606C38] mb-4">
+                Sparrow Refuge is dedicated to protecting and preserving house sparrow populations in urban environments 
+                where their numbers have been drastically declining.
+              </p>
+              <p className="text-lg text-[#606C38]">
+                We create sustainable habitats and raise awareness about the importance of these birds in our ecosystem. 
+                Through our simple yet effective Sparrow Nest product, we aim to bring these cheerful birds back to our cities.
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 bg-white p-2 border border-[#DDA15E]">
+              <AspectRatio ratio={4/3} className="bg-muted">
+                <div className="w-full h-full flex items-center justify-center bg-[#E9EDC9] text-[#606C38]">
+                  Photo Container
+                </div>
+              </AspectRatio>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -68,6 +80,13 @@ const Index = () => {
             className="animate-fade-in [animation-delay:400ms]"
           />
         </div>
+        <div className="mt-16 max-w-2xl mx-auto">
+          <AspectRatio ratio={16/9} className="bg-muted">
+            <div className="w-full h-full flex items-center justify-center bg-[#E9EDC9] text-[#606C38]">
+              Photo Container
+            </div>
+          </AspectRatio>
+        </div>
       </InfoSection>
 
       <SectionDivider />
@@ -88,20 +107,31 @@ const Index = () => {
         ctaLink="/shop"
       />
 
-      <section className="bg-sparrow-light-brown/20 py-16 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">Join Our Mission</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Together, we can create urban spaces where sparrows and people thrive side by side.
-            Learn more about our initiative and how you can help.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild variant="outline" className="border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
-              <a href="/about">About Sparrow Refugee</a>
-            </Button>
-            <Button asChild className="bg-sparrow-brown hover:bg-sparrow-brown/90 text-white">
-              <a href="/about-sparrows">Discover House Sparrows</a>
-            </Button>
+      <section className="bg-[#E9EDC9] py-16 text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2 order-2 md:order-1">
+              <AspectRatio ratio={4/3} className="bg-muted">
+                <div className="w-full h-full flex items-center justify-center bg-[#FEFAE0] text-[#606C38]">
+                  Photo Container
+                </div>
+              </AspectRatio>
+            </div>
+            <div className="w-full md:w-1/2 order-1 md:order-2">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6">Join Our Mission</h2>
+              <p className="text-lg text-[#606C38] mb-8">
+                Together, we can create urban spaces where sparrows and people thrive side by side.
+                Learn more about our initiative and how you can help.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button asChild variant="outline" className="border-[#606C38] text-[#606C38] hover:bg-[#606C38]/10">
+                  <a href="/about">About Sparrow Refuge</a>
+                </Button>
+                <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
+                  <a href="/about-sparrows">Discover House Sparrows</a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
