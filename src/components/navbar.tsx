@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Leaf } from "lucide-react";
@@ -49,7 +48,7 @@ export function Navbar() {
               className="font-sans font-semibold text-xl text-gray-900 flex items-center"
             >
               <img 
-                src="images/sr-logo-nobg.png" 
+                src="/images/sr-logo-nobg.png" 
                 alt="Sparrow Refuge Logo" 
                 className="h-8 mr-2" 
               />
@@ -67,13 +66,19 @@ export function Navbar() {
                 key={item.name}
                 to={item.path}
                 className="font-sans text-sm text-gray-800 hover:text-sparrow-brown transition-colors flex items-center"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 {item.path === "/about" && <Leaf className="mr-1" size={14} />}
                 {item.name}
               </Link>
             ))}
             <Button asChild variant="outline" className="ml-4 border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
-              <Link to="/community">Join Community</Link>
+              <Link
+                to="/community"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Join Community
+              </Link>
             </Button>
           </div>
 
@@ -98,14 +103,22 @@ export function Navbar() {
                 key={item.name}
                 to={item.path}
                 className="block py-2 font-sans text-base text-center text-gray-800 hover:text-sparrow-brown"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 {item.name}
               </Link>
             ))}
             <div className="pt-2 text-center">
               <Button asChild variant="outline" className="border-sparrow-brown text-sparrow-brown hover:bg-sparrow-brown/10">
-                <Link to="/community" onClick={() => setIsOpen(false)}>Join Community</Link>
+                <Link to="/community" onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}>
+                  Join Community
+                </Link>
               </Button>
             </div>
           </div>

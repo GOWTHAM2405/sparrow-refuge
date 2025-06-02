@@ -8,7 +8,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 const galleryImages = [
   {
     id: "img1",
-    imageUrl: "https://images.unsplash.com/photo-1552727451-6f5671e14d83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    imageUrl: "images/sr1.jpg",
     caption: "House sparrow perched on a branch in an urban park",
   },
   {

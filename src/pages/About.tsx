@@ -13,39 +13,53 @@ const About = () => {
       name: "Emma Wilson",
       role: "Founder & Conservation Lead",
       bio: "With a background in urban ecology, Emma founded Sparrow Refugee after noticing the declining sparrow population in her neighborhood. She's dedicated her life to creating spaces where humans and wildlife can thrive together.",
-      imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      imageUrl: "",
     },
     {
       id: "daniel-chen",
       name: "Daniel Chen",
       role: "Product Designer",
       bio: "Daniel combines his love for birds with his expertise in industrial design to create sparrow nests that are both functional for birds and aesthetically pleasing for humans. He's constantly seeking feedback to improve our designs.",
-      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      imageUrl: "",
     },
     {
       id: "olivia-martinez",
       name: "Olivia Martinez",
       role: "Community Manager",
       bio: "Olivia manages our growing community of sparrow enthusiasts. She's passionate about education and organizing events that bring people together around the shared goal of protecting urban wildlife.",
-      imageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      imageUrl: "",
     },
     {
       id: "alex-johnson",
       name: "Alex Johnson",
       role: "Ornithologist",
       bio: "As our resident bird expert, Alex provides scientific guidance to ensure our nests meet the specific needs of house sparrows. He's conducted extensive research on urban bird populations and habitat adaptation.",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+      imageUrl: "",
     },
   ];
   
   return (
     <PageLayout>
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">Our Story</h2>
-          <div className="prose prose-lg mx-auto">
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-sparrow-light-brown/10 via-white to-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none select-none opacity-10">
+          <svg width="100%" height="100%" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="400" cy="200" rx="350" ry="120" fill="#e5d3c6" />
+          </svg>
+        </div>
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-sparrow-brown mb-8 text-center tracking-tight drop-shadow-sm">
+            Our Story
+          </h2>
+          <div className="flex justify-center mb-8">
+            <div className="bg-sparrow-brown/10 border-l-4 border-sparrow-brown px-6 py-4 rounded-md shadow-sm max-w-xl">
+              <blockquote className="italic text-sparrow-brown text-lg md:text-xl font-medium">
+                "The cheerful chirping of house sparrows, once a familiar soundtrack to city life, is fading from our urban soundscape. We set out to bring it back."
+              </blockquote>
+            </div>
+          </div>
+          <div className="prose prose-lg mx-auto text-gray-800">
             <p>
-              Sparrow Refugee was born from a simple observation: the cheerful chirping of house sparrows, 
+              <span className="font-semibold text-sparrow-brown">Sparrow Refugee</span> was born from a simple observation: the cheerful chirping of house sparrows, 
               once a ubiquitous soundtrack to urban life, was growing increasingly rare in our cities.
             </p>
             <p>
@@ -55,7 +69,7 @@ const About = () => {
             </p>
             <p>
               We began by researching the specific needs of house sparrows in urban environments and the 
-              various factors contributing to their decline. Our findings led us to develop the Sparrow Nest, 
+              various factors contributing to their decline. Our findings led us to develop the <span className="font-semibold text-sparrow-brown">Sparrow Nest</span>, 
               a simple yet effective solution designed specifically to provide house sparrows with safe nesting 
               sites in urban areas.
             </p>

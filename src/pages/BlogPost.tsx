@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { PageLayout } from "@/components/page-layout";
 import { Button } from "@/components/ui/button";
@@ -7,14 +6,14 @@ import { formatDistanceToNow } from "date-fns";
 
 // Sample blog data (in a real app, this would come from a CMS or API)
 const blogPosts = [
-  {
-    id: "1",
-    slug: "house-sparrow-decline",
-    title: "Understanding the House Sparrow Decline in Urban Areas",
-    excerpt: "House sparrow populations have declined dramatically in many cities around the world. This article explores the causes and what we can do to help reverse this trend.",
-    date: "2023-11-15T12:00:00Z",
-    imageUrl: "https://images.unsplash.com/photo-1552727451-6f5671e14d83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    content: `
+	{
+		id: "1",
+		slug: "house-sparrow-decline",
+		title: "Understanding the House Sparrow Decline in Urban Areas",
+		excerpt: "House sparrow populations have declined dramatically in many cities around the world. This article explores the causes and what we can do to help reverse this trend.",
+		date: "2023-11-15T12:00:00Z",
+		imageUrl: "/images/sr3.png",
+		content: `
       <p>House sparrows (Passer domesticus) have been our companions in human settlements for thousands of years. These small, unassuming birds have adapted remarkably well to urban environments, nesting in building crevices and feeding on scraps. Yet, in recent decades, their populations have declined dramatically in many cities around the world.</p>
       
       <h2>The Alarming Decline</h2>
@@ -56,15 +55,15 @@ const blogPosts = [
       
       <p>Join our movement by installing a Sparrow Nest, participating in our community programs, or simply spreading awareness about the importance of these humble birds in our urban ecosystems.</p>
     `,
-  },
-  {
-    id: "2",
-    slug: "creating-sparrow-friendly-balcony",
-    title: "How to Create a Sparrow-Friendly Balcony in Your Apartment",
-    excerpt: "Even with limited space, apartment dwellers can provide safe havens for sparrows. Learn how to transform your balcony into a bird-friendly oasis.",
-    date: "2023-10-22T12:00:00Z",
-    imageUrl: "https://images.unsplash.com/photo-1591758879073-6fc9c4ee5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80",
-    content: `
+	},
+	{
+		id: "2",
+		slug: "creating-sparrow-friendly-balcony",
+		title: "How to Create a Sparrow-Friendly Balcony in Your Apartment",
+		excerpt: "Even with limited space, apartment dwellers can provide safe havens for sparrows. Learn how to transform your balcony into a bird-friendly oasis.",
+		date: "2023-10-22T12:00:00Z",
+		imageUrl: "/images/sr18.png",
+		content: `
       <p>Living in an apartment doesn't mean you can't contribute to urban wildlife conservation. Even a small balcony can become a haven for house sparrows with a few thoughtful additions. This guide will help you transform your limited outdoor space into a sparrow-friendly oasis.</p>
       
       <h2>Why Balconies Matter for Sparrows</h2>
@@ -152,15 +151,15 @@ const blogPosts = [
       
       <p>With these simple additions, your apartment balcony can become an important refuge for house sparrows in the urban landscape. Remember that consistency is key—once birds discover your sparrow-friendly balcony, they'll come to rely on the resources you provide.</p>
     `,
-  },
-  {
-    id: "3",
-    slug: "sparrow-nest-maintenance",
-    title: "Seasonal Guide: Maintaining Your Sparrow Nest Throughout the Year",
-    excerpt: "While our nests are designed to be low-maintenance, here are some seasonal tips to ensure they remain attractive and safe for sparrows year-round.",
-    date: "2023-09-18T12:00:00Z",
-    imageUrl: "https://images.unsplash.com/photo-1591445313121-6ec078571574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-    content: `
+	},
+	{
+		id: "3",
+		slug: "sparrow-nest-maintenance",
+		title: "Seasonal Guide: Maintaining Your Sparrow Nest Throughout the Year",
+		excerpt: "While our nests are designed to be low-maintenance, here are some seasonal tips to ensure they remain attractive and safe for sparrows year-round.",
+		date: "2023-09-18T12:00:00Z",
+		imageUrl: "/images/sr26.png",
+		content: `
       <p>Our Sparrow Nests are designed to be as low-maintenance as possible, mimicking the durability of natural nesting sites. However, a little seasonal attention will ensure your nest remains safe, clean, and attractive to sparrows year after year. This guide provides simple maintenance tips for each season.</p>
       
       <h2>Spring (March-May): Preparing for Nesting Season</h2>
@@ -252,112 +251,119 @@ const blogPosts = [
       
       <p>With these simple seasonal maintenance routines, your Sparrow Nest will remain a safe, attractive home for generations of sparrows, contributing to the conservation of these beloved urban birds.</p>
     `,
-  },
-  {
-    id: "4",
-    slug: "sparrow-community-stories",
-    title: "Community Stories: How Sparrows Changed Our Neighborhood",
-    excerpt: "Read inspiring stories from our community members who have seen positive changes in their neighborhoods after installing sparrow nests.",
-    date: "2023-08-05T12:00:00Z",
-    imageUrl: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-    content: "Lorem ipsum...",
-  },
-  {
-    id: "5",
-    slug: "sparrows-urban-biodiversity",
-    title: "The Role of Sparrows in Urban Biodiversity",
-    excerpt: "Sparrows are more than just charming birds – they play a crucial role in maintaining ecological balance in our cities. Learn about their importance.",
-    date: "2023-07-12T12:00:00Z",
-    imageUrl: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-    content: "Lorem ipsum...",
-  },
-  {
-    id: "6",
-    slug: "feeding-sparrows-properly",
-    title: "Guide to Feeding Sparrows: Do's and Don'ts",
-    excerpt: "While installing a nest is a great first step, learning how to properly feed sparrows can further help their populations thrive in urban areas.",
-    date: "2023-06-30T12:00:00Z",
-    imageUrl: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-    content: "Lorem ipsum...",
-  },
+	},
+	{
+		id: "4",
+		slug: "sparrow-community-stories",
+		title: "Community Stories: How Sparrows Changed Our Neighborhood",
+		excerpt: "Read inspiring stories from our community members who have seen positive changes in their neighborhoods after installing sparrow nests.",
+		date: "2023-08-05T12:00:00Z",
+		imageUrl: "/images/sr16.jpg",
+		content: "Lorem ipsum...",
+	},
+	{
+		id: "5",
+		slug: "sparrows-urban-biodiversity",
+		title: "The Role of Sparrows in Urban Biodiversity",
+		excerpt: "Sparrows are more than just charming birds – they play a crucial role in maintaining ecological balance in our cities. Learn about their importance.",
+		date: "2023-07-12T12:00:00Z",
+		imageUrl: "/images/sr22.png",
+		content: "Lorem ipsum...",
+	},
+	{
+		id: "6",
+		slug: "feeding-sparrows-properly",
+		title: "Guide to Feeding Sparrows: Do's and Don'ts",
+		excerpt: "While installing a nest is a great first step, learning how to properly feed sparrows can further help their populations thrive in urban areas.",
+		date: "2023-06-30T12:00:00Z",
+		imageUrl: "/images/sr20.png",
+		content: "Lorem ipsum...",
+	},
 ];
 
 const BlogPost = () => {
-  const { slug } = useParams();
-  const post = blogPosts.find(post => post.slug === slug);
-  
-  if (!post) {
-    return (
-      <PageLayout>
-        <div className="pt-32 pb-16 text-center">
-          <h1 className="text-2xl font-semibold mb-4">Blog Post Not Found</h1>
-          <p className="mb-6">We couldn't find the blog post you're looking for.</p>
-          <Button asChild>
-            <Link to="/blog">Back to Blog</Link>
-          </Button>
-        </div>
-      </PageLayout>
-    );
-  }
-  
-  return (
-    <PageLayout>
-      <article className="pt-32 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/blog" className="text-sparrow-brown hover:underline inline-flex items-center mb-6">
-            ← Back to all articles
-          </Link>
-          
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
-            {post.title}
-          </h1>
-          
-          <p className="text-gray-600 mb-8">
-            {formatDistanceToNow(new Date(post.date), { addSuffix: true })}
-          </p>
-          
-          <div className="mb-10 rounded-lg overflow-hidden">
-            <img 
-              src={post.imageUrl} 
-              alt={post.title}
-              className="w-full h-auto"
-            />
-          </div>
-          
-          <div 
-            className="prose prose-lg max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:font-serif prose-a:text-sparrow-brown"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-          
-          <div className="mt-16 pt-8 border-t border-gray-200">
-            <h3 className="text-xl font-semibold mb-4">Continue Reading</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {blogPosts
-                .filter(p => p.id !== post.id)
-                .slice(0, 2)
-                .map(relatedPost => (
-                  <div key={relatedPost.id} className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-                    <Link to={`/blog/${relatedPost.slug}`} className="block">
-                      <div className="h-48 overflow-hidden">
-                        <img 
-                          src={relatedPost.imageUrl} 
-                          alt={relatedPost.title}
-                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h4 className="text-lg font-semibold line-clamp-2 mb-2">{relatedPost.title}</h4>
-                        <p className="text-gray-600 text-sm">{formatDistanceToNow(new Date(relatedPost.date), { addSuffix: true })}</p>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </div>
-      </article>
-    </PageLayout>
-  );
+	const { slug } = useParams();
+	const post = blogPosts.find((post) => post.slug === slug);
+
+	if (!post) {
+		return (
+			<PageLayout>
+				<div className="pt-32 pb-16 text-center">
+					<h1 className="text-2xl font-semibold mb-4">Blog Post Not Found</h1>
+					<p className="mb-6">We couldn't find the blog post you're looking for.</p>
+					<Button asChild>
+						<Link to="/blog">Back to Blog</Link>
+					</Button>
+				</div>
+			</PageLayout>
+		);
+	}
+
+	return (
+		<PageLayout>
+			<article className="pt-32 pb-16">
+				<div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+					{/* Removed the 'Back to all articles' button as requested */}
+
+					<h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4">
+						{post.title}
+					</h1>
+
+					<p className="text-gray-600 mb-8">
+						{formatDistanceToNow(new Date(post.date), { addSuffix: true })}
+					</p>
+
+					<div className="mb-10 rounded-lg overflow-hidden">
+						<img
+							src={post.imageUrl}
+							alt={post.title}
+							className="w-full h-auto"
+						/>
+					</div>
+
+					<div
+						className="prose prose-lg max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:font-serif prose-a:text-sparrow-brown"
+						dangerouslySetInnerHTML={{ __html: post.content }}
+					/>
+
+					<div className="mt-16 pt-8 border-t border-gray-200">
+						<h3 className="text-xl font-semibold mb-4">Continue Reading</h3>
+						<div className="grid md:grid-cols-2 gap-6">
+							{blogPosts
+								.filter((p) => p.id !== post.id)
+								.slice(0, 2)
+								.map((relatedPost) => (
+									<div
+										key={relatedPost.id}
+										className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
+									>
+										<Link to={`/blog/${relatedPost.slug}`} className="block">
+											<div className="h-48 overflow-hidden">
+												<img
+													src={relatedPost.imageUrl}
+													alt={relatedPost.title}
+													className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+												/>
+											</div>
+											<div className="p-4">
+												<h4 className="text-lg font-semibold line-clamp-2 mb-2">
+													{relatedPost.title}
+												</h4>
+												<p className="text-gray-600 text-sm">
+													{formatDistanceToNow(new Date(relatedPost.date), {
+														addSuffix: true,
+													})}
+												</p>
+											</div>
+										</Link>
+									</div>
+								))}
+						</div>
+					</div>
+				</div>
+			</article>
+		</PageLayout>
+	);
 };
 
 export default BlogPost;
