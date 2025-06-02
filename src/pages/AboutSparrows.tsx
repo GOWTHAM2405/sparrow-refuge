@@ -14,7 +14,7 @@ const AboutSparrows = () => {
       <HeroSection
         title="About House Sparrows"
         subtitle="The small birds with a big impact on our urban ecosystems"
-        imageUrl="https://images.unsplash.com/photo-1621866486780-1a732a78329a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+        imageUrl="images/sr16.jpg"
         imageAlt="Close-up of a house sparrow"
         overlayColor="bg-black/40"
         ctaText="Adopt Sparrows"
@@ -28,7 +28,7 @@ const AboutSparrows = () => {
         content="House sparrows are highly social birds that live in colonies. They build their nests in small cavities in buildings, 
         under eaves, in wall vents, and other sheltered spaces in human structures. Their nests are simple but effective - messy spheres of grass, 
         feathers, string, and other soft materials."
-        imageUrl="https://images.unsplash.com/photo-1624153834825-529db6ce2aa0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+        imageUrl="images/sr20.png"
         imageAlt="House sparrow on branch"
         reversed={true}
       >

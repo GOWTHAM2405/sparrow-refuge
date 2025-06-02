@@ -12,28 +12,28 @@ const products = [
     name: "Standard Sparrow Nest",
     price: 29.99,
     description: "Our classic sparrow nest design, perfect for balconies and windows. Made from sustainable materials that blend with urban environments.",
-    imageUrl: "https://images.unsplash.com/photo-1591445313121-6ec078571574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "images/sr1.jpg",
   },
   {
     id: "sparrow-nest-deluxe",
     name: "Deluxe Sparrow Nest",
     price: 44.99,
     description: "An upgraded nest design with additional protection from weather elements and predators. Perfect for gardens and larger outdoor spaces.",
-    imageUrl: "https://images.unsplash.com/photo-1552727451-6f5671e14d83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "images/sr13.jpg",
   },
   {
     id: "sparrow-nest-compact",
     name: "Compact Sparrow Nest",
     price: 24.99,
     description: "A smaller nest design for limited spaces. Ideal for apartment dwellers who still want to provide a home for sparrows.",
-    imageUrl: "https://images.unsplash.com/photo-1591758879073-6fc9c4ee5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "images/sr21.png",
   },
   {
     id: "sparrow-feeder-attachment",
     name: "Nest Feeder Attachment",
     price: 14.99,
     description: "An attachable feeder that complements any of our nest designs. Helps attract sparrows to their new home.",
-    imageUrl: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "images/sr27.png",
   }
 ];
 

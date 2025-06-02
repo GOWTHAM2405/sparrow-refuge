@@ -1,4 +1,3 @@
-
 import { PageLayout } from "@/components/page-layout";
 import { HeroSection } from "@/components/hero-section";
 import { StorySection } from "@/components/story-section";
@@ -15,18 +14,28 @@ const Index = () => {
   return (
     <PageLayout>
       <HeroSection
-        title="Protect Sparrows with Our Nest Boxes"
+        title="Lets save the skies from going 'Silent'"
         subtitle="Provide a safe home for urban sparrows with our specially designed nest boxes."
         ctaText="Adopt Sparrows"
         ctaLink="/shop"
-        imageUrl="/lovable-uploads/e3333151-69e8-4069-b686-69f334fa73d7.png"
+        imageUrl="images/sr17.png"
         imageAlt="Sparrow on a nest box"
       />
 
       <section id="mission" className="py-16 md:py-24 bg-[#FEFAE0]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
+            {/* Image first on desktop */}
+            <div className="w-full md:w-1/2 bg-white order-1 md:order-1">
+              <AspectRatio ratio={4/3} className="bg-[#FEFAE0]">
+                <img
+                  src="images/sr15.jpg"
+                  alt="Sparrow nest box in use"
+                  className="w-full h-full object-contain rounded"
+                />
+              </AspectRatio>
+            </div>
+            <div className="w-full md:w-1/2 order-2 md:order-2">
               <h2 className="text-2xl md:text-3xl font-semibold text-[#283618] mb-6 font-serif">Our Mission</h2>
               <p className="text-lg text-[#606C38] mb-4 font-serif">
                 Sparrow Refuge is dedicated to protecting and preserving house sparrow populations in urban environments 
@@ -40,13 +49,6 @@ const Index = () => {
                 <a href="/shop"><ShoppingBag className="mr-2" size={18} />Adopt Sparrows</a>
               </Button>
             </div>
-            <div className="w-full md:w-1/2 bg-white p-2 border border-[#DDA15E]">
-              <AspectRatio ratio={4/3} className="bg-muted">
-                <div className="w-full h-full flex items-center justify-center bg-[#E9EDC9] text-[#606C38]">
-                  Photo Container
-                </div>
-              </AspectRatio>
-            </div>
           </div>
         </div>
       </section>
@@ -56,8 +58,8 @@ const Index = () => {
       <StorySection
         title="The Disappearing Urban Sparrow"
         content="House sparrows have been our companions in human settlements for thousands of years. Yet in the past few decades, their populations have declined by over 60% in some urban areas. Modern building techniques, loss of green spaces, and reduced food sources have all contributed to this alarming trend."
-        imageUrl="https://images.unsplash.com/photo-1591445313121-6ec078571574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-        imageAlt="Sparrow in an urban environment"
+        imageUrl="images/sr10.png"
+        imageAlt="Sparrow perched in urban habitat"
       >
         <div className="mt-6">
           <Button asChild className="bg-[#606C38] hover:bg-[#283618] text-white">
@@ -85,16 +87,18 @@ const Index = () => {
             className="animate-fade-in [animation-delay:200ms]"
           />
           <FeatureCard
-            title="Cultural Significance"
-            description="Throughout history, sparrows have been symbols of community, joy, and the everyday beauty of nature."
+            title="Happiness "
+            description="Throughout history, sparrows have been symbols of community, joy, and the everyday beauty of nature and makes us happy just be seeing them in our homes."
             className="animate-fade-in [animation-delay:400ms]"
           />
         </div>
         <div className="mt-16 max-w-2xl mx-auto">
           <AspectRatio ratio={16/9} className="bg-muted">
-            <div className="w-full h-full flex items-center justify-center bg-[#E9EDC9] text-[#606C38]">
-              Photo Container
-            </div>
+            <img
+              src="images/sr20.png"
+              alt="Sparrow in natural habitat"
+              className="w-full h-full object-contain rounded"
+            />
           </AspectRatio>
         </div>
         <div className="text-center mt-8">
@@ -116,7 +120,7 @@ const Index = () => {
           "Weather-resistant sustainable materials",
           "Lets sparrows live freely without cages or constraints"
         ]}
-        imageUrl="https://images.unsplash.com/photo-1591758879073-6fc9c4ee5162?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
+        imageUrl="images/sr18.png"
         imageAlt="Sparrow Nest product"
         ctaText="Adopt Sparrows"
         ctaLink="/shop"
@@ -125,11 +129,13 @@ const Index = () => {
       <section className="bg-[#E9EDC9] py-16 text-center">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2 order-2 md:order-1">
-              <AspectRatio ratio={4/3} className="bg-muted">
-                <div className="w-full h-full flex items-center justify-center bg-[#FEFAE0] text-[#606C38]">
-                  Photo Container
-                </div>
+            <div className="w-full md:w-1/2 order-2 md:order-1 bg-[#E9EDC9]">
+              <AspectRatio ratio={4/3} className="bg-[#E9EDC9]">
+                <img
+                  src="images/sr25.png"
+                  alt="Join our mission - sparrow community"
+                  className="w-full h-full object-contain rounded"
+                />
               </AspectRatio>
             </div>
             <div className="w-full md:w-1/2 order-1 md:order-2">
