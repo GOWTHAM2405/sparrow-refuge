@@ -49,7 +49,7 @@ export function Navbar() {
               className="font-sans font-semibold text-xl text-gray-900 flex items-center"
             >
               <img 
-                src="/lovable-uploads/cdcae1ac-277c-4470-800e-ac80ae0f703d.png" 
+                src="images/sr-logo-nobg.png" 
                 alt="Sparrow Refuge Logo" 
                 className="h-8 mr-2" 
               />

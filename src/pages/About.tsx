@@ -1,6 +1,4 @@
-
 import { PageLayout } from "@/components/page-layout";
-import { HeroSection } from "@/components/hero-section";
 import { StorySection } from "@/components/story-section";
 import { InfoSection } from "@/components/info-section";
 import { FeatureCard } from "@/components/feature-card";
@@ -42,12 +40,6 @@ const About = () => {
   
   return (
     <PageLayout>
-      <HeroSection
-        title="About Sparrow Refugee"
-        subtitle="The story behind our mission to save urban house sparrows"
-        backgroundClass="bg-gradient-to-r from-amber-50 to-amber-100"
-      />
-
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">Our Story</h2>
