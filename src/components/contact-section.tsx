@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -12,6 +11,7 @@ export function ContactSection() {
     email: "",
     message: ""
   });
+  const [mailCopied, setMailCopied] = useState(false);
   const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,6 +37,12 @@ export function ContactSection() {
     });
   };
 
+  const handleCopyMail = async () => {
+    await navigator.clipboard.writeText("info@sparrowrefuge.org");
+    setMailCopied(true);
+    setTimeout(() => setMailCopied(false), 1500);
+  };
+
   return (
     <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-white to-amber-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +62,17 @@ export function ContactSection() {
               </div>
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900">Email Us</h3>
-                <p className="mt-1 text-gray-700">info@sparrowrefuge.org</p>
+                <button
+                  onClick={handleCopyMail}
+                  className="mt-1 text-gray-700 hover:text-sparrow-brown transition-colors focus:outline-none"
+                  title="Copy email"
+                  type="button"
+                >
+                  info@sparrowrefuge.org
+                </button>
+                {mailCopied && (
+                  <span className="ml-2 text-xs text-green-600">Copied!</span>
+                )}
               </div>
             </div>
             
@@ -67,6 +83,23 @@ export function ContactSection() {
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900">Call Us</h3>
                 <p className="mt-1 text-gray-700">(555) 123-4567</p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="flex-shrink-0 mt-1">
+                <Instagram className="h-6 w-6 text-sparrow-brown" />
+              </div>
+              <div className="ml-4">
+                <h3 className="text-lg font-medium text-gray-900">Instagram</h3>
+                <a
+                  href="https://instagram.com/sparrowrefuge"
+                  className="mt-1 text-gray-700 hover:text-sparrow-brown transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @sparrowrefuge
+                </a>
               </div>
             </div>
             
